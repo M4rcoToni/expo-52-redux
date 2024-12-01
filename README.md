@@ -26,4 +26,17 @@ Redux is more useful when:
 You have large amounts of application state that are needed in many places in the app
 The app state is updated frequently over time
 The logic to update that state may be complex
-The app has a medium or large-sized codebase, and might be worked on by many people
+The app has a medium or large-sized codebase, and might be worked on by many people.
+
+## Redux Libraries and Tools
+
+**Redux Toolkit**  - It contains packages and functions that we think are essential for building a Redux app. 
+
+**React-Redux** - official package that lets your React components interact with a Redux store by reading pieces of state and dispatching actions to update the store.
+
+**Redux DevTools Extension** - It is a browser extension that lets you inspect every action and state change in your app, along with a history of actions.
+
+##### ⚠️ IMPORTANT - Redux DevTolls in Expo
+
+[Redux DevTools for Expo (or React Native)](https://github.com/matt-oakes/redux-devtools-expo-dev-plugin)
+
