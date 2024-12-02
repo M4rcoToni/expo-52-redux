@@ -69,3 +69,31 @@ An action creator is a function that creates and returns an action object
       payload: text
    }
 }`
+
+### Reducers
+
+A `reducer` is a function that receives the current state and an action object.
+
+think of a reducer as an `event listener` which handles events based on the received action (event) type.
+
+Reducers rules:
+
+* They should only calculate the new state value based on the `state` and `action` arguments
+* They are not allowed to modify the existing state. Instead, they must make immutable updates, by copying the existing state and making changes to the copied values.
+* They must be **"pure"** - they cannot do any asynchronous logic, calculate random values, or cause other "side effects"
+
+Reducers can use any kind of logic inside to decide what the new state should be: `if/else`, `switch`, `loops`, and `so on`.
+
+💡 _**Reducer** name come from the Array.reduce() which receive a "reduce callback" function that takes the **previousResult** and **currentItem** arguments, does something with them, and returns a new result value._
+ 
+⚠️ _Reducers update the state when an action is dispatched._
+
+
+
+
+
+
+
+
+
+
