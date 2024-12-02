@@ -54,7 +54,7 @@ The `type` field should be a string that gives this action a descriptive name, l
 
 An action object can have payload field that contains additional information about what happened.
 
-```
+```ts
 const addTodoAction = {
    type: 'todos/todoAdded',
    payload: 'Buy milk'
@@ -67,7 +67,7 @@ const addTodoAction = {
 
 An action creator is a function that creates and returns an action object
 
-```
+```ts
 const addTodo = text => {
    return {
       type: 'todos/todoAdded',
@@ -104,15 +104,24 @@ The current Redux application state lives in an object called the store .
 
 The store is created by passing in a reducer, and has a method called getState that returns the current state value:
 
-```
+```ts
 import { configureStore } from '@reduxjs/toolkit'
 const store = configureStore({ reducer: counterReducer })
 console.log(store.getState())
 // {value: 0}`
 ```
 
+#
 
+### Dispatch
+The Redux store has a method called `dispatch`. **The only way to update the state is to call `store.dispatch()` and pass in an action object.** 
 
+```ts
+store.dispatch({ type: 'counter/increment' })
+
+console.log(store.getState())
+// {value: 1}
+```
 
 
 

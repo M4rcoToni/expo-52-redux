@@ -5,7 +5,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import {useDispatch, useSelector} from "react-redux";
-import { decrement, increment } from '@/redux/features/counter/counterSlice'
+import { decrement } from '@/redux/features/counter/counterSlice'
 
 export default function HomeScreen() {
     const count = useSelector(state => state.counter.value)
@@ -26,7 +26,7 @@ export default function HomeScreen() {
       </ThemedView>
         <ThemedView>
             <TouchableOpacity
-                onPress={() => dispatch(increment())}
+                onPress={() => dispatch({ type: 'counter/increment' })}
             >
                 <ThemedText>Increment</ThemedText>
             </TouchableOpacity>
