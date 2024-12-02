@@ -40,3 +40,32 @@ The app has a medium or large-sized codebase, and might be worked on by many peo
 
 [Redux DevTools for Expo (or React Native)](https://github.com/matt-oakes/redux-devtools-expo-dev-plugin)
 
+## Redux Terms and Concepts
+
+💡 _This is the basic idea behind Redux: a single centralized place to contain the global state in your application, and specific patterns to follow when updating that state to make the code predictable._
+
+### Actions
+
+An action is a plain JavaScript object that has a type field. 
+
+**Action is an event that describes something that happened in the application.**
+
+The `type` field should be a string that gives this action a descriptive name, like "todos/todoAdded" - "domain/eventName"
+
+An action object can have payload field that contains additional information about what happened.
+
+`const addTodoAction = {
+   type: 'todos/todoAdded',
+   payload: 'Buy milk'
+}`
+
+### Action Creators
+
+An action creator is a function that creates and returns an action object
+
+`const addTodo = text => {
+   return {
+      type: 'todos/todoAdded',
+      payload: text
+   }
+}`
