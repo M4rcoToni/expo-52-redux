@@ -123,6 +123,18 @@ console.log(store.getState())
 // {value: 1}
 ```
 
+#
+
+### Selectors
+
+Selectors are functions that know how to extract specific pieces of information from a store state value. 
+
+```ts
+const selectCounterValue = state => state.value
+const currentValue = selectCounterValue(store.getState())
+console.log(currentValue)
+// 1
+```
 
 
 
