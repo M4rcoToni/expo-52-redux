@@ -54,21 +54,29 @@ The `type` field should be a string that gives this action a descriptive name, l
 
 An action object can have payload field that contains additional information about what happened.
 
-`const addTodoAction = {
+```
+const addTodoAction = {
    type: 'todos/todoAdded',
    payload: 'Buy milk'
-}`
+}
+```
+
+#
 
 ### Action Creators
 
 An action creator is a function that creates and returns an action object
 
-`const addTodo = text => {
+```
+const addTodo = text => {
    return {
       type: 'todos/todoAdded',
       payload: text
    }
-}`
+}
+```
+
+#
 
 ### Reducers
 
@@ -88,6 +96,20 @@ Reducers can use any kind of logic inside to decide what the new state should be
  
 ⚠️ _Reducers update the state when an action is dispatched._
 
+#
+
+### Store
+
+The current Redux application state lives in an object called the store .
+
+The store is created by passing in a reducer, and has a method called getState that returns the current state value:
+
+```
+import { configureStore } from '@reduxjs/toolkit'
+const store = configureStore({ reducer: counterReducer })
+console.log(store.getState())
+// {value: 0}`
+```
 
 
 
